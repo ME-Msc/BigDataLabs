@@ -1,28 +1,32 @@
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 
-public class InvertedIndexMapper extends Mapper<LongWritable, Text, Text, Text>
+public class InvertedIndexMapper extends Mapper<Object, Text, Text, IntWritable>
 {
     @Override
-    protected void map(LongWritable key, Text value, Context context)
+    protected void map(Object key, Text value, Context context)
     // default RecordReader: LineRecordReader
     // key: line offset; value: line string
     throws IOException, InterruptedException
     {
         FileSplit fileSplit = (FileSplit)context.getInputSplit();
         String fileName = fileSplit.getPath().getName();
+        int pos = fileName.indexOf(".");
+        if (pos > 0) {
+            fileName = fileName.substring(0, pos);
+        }
+
         Text word = new Text();
-        Text fileName_lineOffset = new Text(fileName+"#"+key.toString());
         StringTokenizer itr = new StringTokenizer(value.toString());
-        while(itr.hasMoreTokens())
-        {
-            word.set(itr.nextToken());
-            context.write(word, fileName_lineOffset);
+        IntWritable one = new IntWritable(1);
+        while(itr.hasMoreTokens()) {
+            word.set(itr.nextToken() + "#" + fileName);
+            context.write(word, one);
         }
     }
 }
