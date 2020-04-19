@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GlobalSort:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afabe009-8648-45b4-8624-6a1c28784610" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ald8YZCGiG5hvJy0nSpYx5xiQv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/hadoop/hadoop-2.7.1/share/hadoop/mapreduce/lib" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afabe009-8648-45b4-8624-6a1c28784610" name="Default Changelist" comment="" />
+      <created>1587313957268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587313957268</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="245" y="227" width="527" height="434" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587314127559">
+      <screen x="0" y="28" width="1918" height="827" />
+    </state>
+    <state x="245" y="227" width="527" height="434" key="#com.intellij.ide.util.TreeClassChooserDialog/0.28.1918.827@0.28.1918.827" timestamp="1587314127559" />
+    <state x="144" y="183" width="730" height="519" key="FileChooserDialogImpl" timestamp="1587314095997">
+      <screen x="0" y="28" width="1918" height="827" />
+    </state>
+    <state x="144" y="183" width="730" height="519" key="FileChooserDialogImpl/0.28.1918.827@0.28.1918.827" timestamp="1587314095997" />
+    <state x="0" y="28" width="1026" height="827" key="SettingsEditor" timestamp="1587314163689">
+      <screen x="0" y="28" width="1918" height="827" />
+    </state>
+    <state x="0" y="28" width="1026" height="827" key="SettingsEditor/0.28.1918.827@0.28.1918.827" timestamp="1587314163689" />
+  </component>
+</project>
