@@ -27,7 +27,7 @@ cd /hadoop/sbin
 cd ~
 hadoop fs -put [$input file in linux] [$input file in hdfs]  
 hadoop fs -ls [$input file in hdfs]
-hadoop jar [$absolute path of la2.jar in linux] [$input file in hdfs] [$output file in hdfs]
+hadoop jar [$absolute path of InvertedIndex.jar in linux] [$input file in hdfs] [$output file in hdfs]
 hadoop fs -cat [$output file in hdfs]/part-r-00000
 cd /hadoop/sbin
 ./mr-jobhistory-daemon.sh stop historyserver
@@ -54,20 +54,27 @@ cd /hadoop/sbin
 Same as InvertedIndex
 
 
-## TD_IDF
+## TfIdf
 ### Files
 * code
-    * TD_IDF/src
+    * TfIdf/src
 * jar 
-    * TD_IDF/jar/TD_IDF.jar
+    * TfIdf/jar/TfIdf.jar
     * other jar packets are libraries
 * test
     * simple
-        * TD_IDF/test/TD_IDFTest-in
-        * TD_IDF/test/TD_IDFTest-out
+        * InvertedIndex/test/InvertedIndexTest-out
+        * TfIdf/test/TfIdfTest-out
+        * InvertedIndex/test/InvertedIndexTest-in
     * whole
-        * TD_IDF/test/TD_IDF-in
-        * TD_IDF/test/TD_IDF-out
+        * InvertedIndex/test/InvertedIndex-out
+        * TfIdf/test/TfIdf-out
+        * InvertedIndex/test/InvertedIndex-in
 
 ### Run
-Same as InvertedIndex
+**Attention** : TfIdf.jar need 3 parameters.
+
+```
+hadoop jar [$absolute path of TfIdf.jar in linux] [$InvertedIndex-out file in hdfs] [$output file in hdfs] [$InvertedIndex-in file in hdfs] 
+```
+

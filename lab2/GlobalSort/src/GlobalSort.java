@@ -11,11 +11,11 @@ public class GlobalSort {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         if (args.length != 2) {
-            System.err.println("Usage: InvertedIndex <in> <out>");
+            System.err.println("Usage: GlobalSort <in> <out>");
             System.exit(2);
         }
 
-        Job job = Job.getInstance(conf, "InvertedIndex");
+        Job job = Job.getInstance(conf, "GlobalSort");
         job.setJarByClass(GlobalSort.class);
         job.setInputFormatClass(KeyValueTextInputFormat.class);
         job.setMapperClass(GlobalSortMapper.class);
