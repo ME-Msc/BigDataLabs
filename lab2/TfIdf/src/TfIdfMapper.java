@@ -22,7 +22,10 @@ public class TfIdfMapper extends Mapper<Object, Text, Text, Text>{
                     break;
             }
             int freq = Integer.parseInt(term.split(":")[1]);
-            authorMap.put(author, freq);
+            if(authorMap.containsKey(author))
+                authorMap.put(author, authorMap.get(author)+freq);
+            else
+                authorMap.put(author, freq);
         }
         for(Map.Entry<String, Integer> entry:authorMap.entrySet()) {
             Text name = new Text();
