@@ -13,11 +13,11 @@ public class SecondSort {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         if (args.length != 2) {
-            System.err.println("Usage: InvertedIndex <in> <out>");
+            System.err.println("Usage: SecondSort <in> <out>");
             System.exit(2);
         }
 
-        Job job = Job.getInstance(conf, "InvertedIndex");
+        Job job = Job.getInstance(conf, "SecondSort");
         job.setJarByClass(SecondSort.class);
         job.setMapperClass(SecondSortMapper.class);
         job.setGroupingComparatorClass(SecondSortComparator.class);
